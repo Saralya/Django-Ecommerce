@@ -83,7 +83,7 @@ class Profile(models.Model):
     def _str_(self):
         return self.username + "'s Profile"
 
-    def is_fully_field(self):  # ei function er kaj hocche kono user Profile model er sob field fill up korse kina check kora
+    def is_fully_filled(self):  # ei function er kaj hocche kono user Profile model er sob field fill up korse kina check kora
         fields_names = [f.name for f in self._meta.get_fields()] # Profile model er sob gula field akhon fields_names e chole ashbe
 
         for field_name in fields_names:
