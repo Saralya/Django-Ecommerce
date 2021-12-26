@@ -8,7 +8,7 @@ from django.views.generic import ListView, DetailView
 from App_Shop.models import Product
 
 # Mixin
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin  # same as @login_required
 # Create your views here.
 
 
@@ -17,6 +17,6 @@ class Home(ListView):
     model = Product
     template_name = 'App_Shop/home.html'
 
-class ProductDetail(DetailView):
+class ProductDetail(DetailView):  # use LoginRequiredMixin here if needed
     model = Product
     template_name = 'App_Shop/product_detail.html'
